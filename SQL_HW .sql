@@ -13,7 +13,19 @@ select concat(first_name," ", last_name) as 'Actor Name'
 select * 
 	from actor
     where first_name= 'Joe';
-    
+
+-- 2b. Find all actors whose last name contain the letters GEN:
+
+select *
+	from actor
+	where last_name like '%GEN%';
+-- 2c. Find all actors whose last names contain the letters LI. This time, order the rows by last name and first name, in that order:
+
+select * 
+	from actor 
+	where last_name like '%LI%'
+	order by 2, 1;
+
 -- 2d. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
 select country_id,
 	country
